@@ -1,11 +1,11 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.4.2.3
+Version:	3.6.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.4/%{name}-%{version}.tar.xz
-# Source0-md5:	a35af87389e4c47835300871a8b38b12
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.6/%{name}-%{version}.tar.xz
+# Source0-md5:	f707f5a091150f48247f2cfb463e7b93
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
 BuildRequires:	cheese-devel
@@ -19,8 +19,7 @@ BuildRequires:	gcr-devel
 BuildRequires:	geoclue-devel
 BuildRequires:	gnome-online-accounts-devel
 BuildRequires:	gsettings-desktop-schemas-devel
-BuildRequires:	gtk+-devel
-BuildRequires:	gtk3-webkit-devel
+BuildRequires:	gtk+3-webkit-devel
 BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	libcanberra-gtk3-devel
@@ -101,6 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
+rm -f $RPM_BUILD_ROOT%{_libdir}/*/*.la
 
 %find_lang %{name} --with-gnome --with-omf
 
@@ -127,6 +127,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libexecdir}/empathy-chat
 %attr(755,root,root) %{_libdir}/mission-control-plugins.0/mcp-account-manager-goa.so
 
+%attr(755,root,root) %{_libdir}/empathy/libempathy-3.6.1.so
+%attr(755,root,root) %{_libdir}/empathy/libempathy-gtk-3.6.1.so
+
+%{_datadir}/adium
 %{_datadir}/%{name}
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Auth.service
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Call.service
