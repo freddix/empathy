@@ -1,11 +1,11 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.6.1
+Version:	3.6.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	f707f5a091150f48247f2cfb463e7b93
+# Source0-md5:	c300224c8f920ff3b9c1a5e353ae1027
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
 BuildRequires:	cheese-devel
@@ -127,8 +127,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libexecdir}/empathy-chat
 %attr(755,root,root) %{_libdir}/mission-control-plugins.0/mcp-account-manager-goa.so
 
-%attr(755,root,root) %{_libdir}/empathy/libempathy-3.6.1.so
-%attr(755,root,root) %{_libdir}/empathy/libempathy-gtk-3.6.1.so
+%attr(755,root,root) %{_libdir}/empathy/libempathy-%{version}.so
+%attr(755,root,root) %{_libdir}/empathy/libempathy-gtk-%{version}.so
 
 %{_datadir}/adium
 %{_datadir}/%{name}
