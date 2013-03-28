@@ -1,11 +1,11 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.6.3
+Version:	3.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	b45dc0c996a7068efe897e6a22896943
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.8/%{name}-%{version}.tar.xz
+# Source0-md5:	2e31241929d2de09aed3b1d9688058c9
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
 BuildRequires:	cheese-devel
@@ -136,8 +136,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Call.service
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.service
-
-%{_datadir}/GConf/gsettings/empathy.convert
 %{_datadir}/glib-2.0/schemas/org.gnome.Empathy.gschema.xml
 
 %{_datadir}/telepathy/clients/Empathy.Auth.client
