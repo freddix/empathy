@@ -28,7 +28,6 @@ BuildRequires:	libgnome-keyring-devel
 BuildRequires:	libnotify-devel
 BuildRequires:	libsoup-devel
 BuildRequires:	libxml2-devel
-BuildRequires:	nautilus-sendto-devel
 BuildRequires:	telepathy-farstream-devel
 BuildRequires:	telepathy-logger-devel
 BuildRequires:	telepathy-mission-control-devel
@@ -67,7 +66,7 @@ A nautilus-sendto plugin for sending files via Empathy.
 %patch0 -p1
 
 # kill gnome common deps
-sed -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
+%{__sed} -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
     -i -e 's/GNOME_MAINTAINER_MODE_DEFINES//g'	\
     -i -e 's/GNOME_COMMON_INIT//g'		\
     -i -e 's/GNOME_CXX_WARNINGS.*//g'		\
@@ -147,8 +146,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/*.desktop
 
 %{_mandir}/man1/empathy*.1*
-
-%files -n nautilus-sendto-empathy
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/nautilus-sendto/plugins/libnstempathy.so
 
