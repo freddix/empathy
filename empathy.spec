@@ -1,32 +1,31 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.8.4
+Version:	3.10.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	7e2a911a9b304baada569c14abbb8314
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.10/%{name}-%{version}.tar.xz
+# Source0-md5:	c7743dfedfc9e629e15353b6c3e8f6ab
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
-BuildRequires:	cheese-devel
+BuildRequires:	cheese-devel >= 3.10.0
 BuildRequires:	clutter-gst-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	enchant-devel
-BuildRequires:	evolution-data-server-devel
+BuildRequires:	evolution-data-server-devel >= 3.10.0
 BuildRequires:	farstream-devel
 BuildRequires:	folks-devel
 BuildRequires:	gcr-devel
-BuildRequires:	geoclue-devel
-BuildRequires:	gnome-online-accounts-devel
-BuildRequires:	gsettings-desktop-schemas-devel
-BuildRequires:	gtk+3-webkit-devel
+BuildRequires:	gnome-online-accounts-devel >= 3.10.0
+BuildRequires:	gsettings-desktop-schemas-devel >= 3.10.0
+BuildRequires:	gtk+3-webkit-devel >= 2.2.0
 BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	libcanberra-gtk3-devel
 BuildRequires:	libchamplain-gtk-devel
-BuildRequires:	libgnome-keyring-devel
+BuildRequires:	libgnome-keyring-devel >= 3.10.0
 BuildRequires:	libnotify-devel
-BuildRequires:	libsoup-devel
+BuildRequires:	libsoup-devel >= 2.44.0
 BuildRequires:	libxml2-devel
 BuildRequires:	telepathy-farstream-devel
 BuildRequires:	telepathy-logger-devel
@@ -101,7 +100,7 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
 rm -f $RPM_BUILD_ROOT%{_libdir}/*/*.la
 
-%find_lang %{name} --with-gnome --with-omf
+%find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -136,6 +135,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
 %{_datadir}/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Empathy.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.gnome.telepathy-account-widgets.gschema.xml
 
 %{_datadir}/telepathy/clients/Empathy.Auth.client
 %{_datadir}/telepathy/clients/Empathy.Call.client
