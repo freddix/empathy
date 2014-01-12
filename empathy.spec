@@ -77,18 +77,11 @@ A nautilus-sendto plugin for sending files via Empathy.
 %{__automake}
 %{__autoconf}
 %configure \
-	--disable-geocode		\
 	--disable-schemas-compile	\
 	--disable-silent-rules		\
 	--disable-static		\
-	--enable-goa			\
 	--enable-gudev			\
-	--enable-location		\
-	--enable-map			\
-	--enable-spell			\
-	--with-cheese			\
-	--with-connectivity=nm		\
-	--with-eds
+	--with-cheese
 %{__make}
 
 %install
