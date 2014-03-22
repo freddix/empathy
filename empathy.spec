@@ -1,7 +1,7 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
 Version:	3.10.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.10/%{name}-%{version}.tar.xz
