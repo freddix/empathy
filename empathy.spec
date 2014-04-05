@@ -1,31 +1,31 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.10.3
-Release:	2
+Version:	3.12.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	de7dc21d91d50a1a9861dd3f240274d7
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.12/%{name}-%{version}.tar.xz
+# Source0-md5:	1f8dad37c9353838fc5fa449ff685e19
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
-BuildRequires:	cheese-devel >= 3.10.0
+BuildRequires:	cheese-devel >= 3.12.0
 BuildRequires:	clutter-gst-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	enchant-devel
-BuildRequires:	evolution-data-server-devel >= 3.10.0
+BuildRequires:	evolution-data-server-devel >= 3.12.0
 BuildRequires:	farstream-devel
 BuildRequires:	folks-devel
 BuildRequires:	gcr-devel
-BuildRequires:	gnome-online-accounts-devel >= 3.10.0
-BuildRequires:	gsettings-desktop-schemas-devel >= 3.10.0
-BuildRequires:	gtk+3-webkit-devel >= 2.2.0
+BuildRequires:	gnome-online-accounts-devel >= 3.12.0
+BuildRequires:	gsettings-desktop-schemas-devel >= 3.12.0
+BuildRequires:	gtk+3-webkit-devel >= 2.4.0
 BuildRequires:	intltool
 BuildRequires:	iso-codes
 BuildRequires:	libcanberra-gtk3-devel
 BuildRequires:	libchamplain-gtk-devel
-BuildRequires:	libgnome-keyring-devel >= 3.10.0
+BuildRequires:	libgnome-keyring-devel >= 3.12.0
 BuildRequires:	libnotify-devel
-BuildRequires:	libsoup-devel >= 2.44.0
+BuildRequires:	libsoup-devel >= 2.46.0
 BuildRequires:	libxml2-devel
 BuildRequires:	telepathy-farstream-devel
 BuildRequires:	telepathy-logger-devel
