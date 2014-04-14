@@ -1,11 +1,11 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.12.0
+Version:	3.12.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	1f8dad37c9353838fc5fa449ff685e19
+# Source0-md5:	7949f1563043db1fbbee0aa95dfb1208
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
 BuildRequires:	cheese-devel >= 3.12.0
@@ -90,8 +90,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
-rm -f $RPM_BUILD_ROOT%{_libdir}/*/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*/*.la
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/GConf
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/{ca@valencia,en@shaw}
 
 %find_lang %{name} --with-gnome --all-name
 
