@@ -1,11 +1,11 @@
 Summary:	Telepathy client for GNOME
 Name:		empathy
-Version:	3.12.1
+Version:	3.12.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/empathy/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	7949f1563043db1fbbee0aa95dfb1208
+# Source0-md5:	8b8f837ab0079178fa9f6a1cd199790e
 Patch0:		%{name}-configure.patch
 URL:		http://live.gnome.org/Empathy
 BuildRequires:	cheese-devel >= 3.12.0
